@@ -12,7 +12,6 @@ public class Receipt extends Transaction {
         this.person = (Person) customer;
     }
 
-
     public Person getPerson() {
         return person;
     }

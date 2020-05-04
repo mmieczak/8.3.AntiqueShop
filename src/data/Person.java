@@ -7,4 +7,8 @@ public class Person extends Customer{
         super(name,isPremium);
         this.surname = surname;
     }
+
+    public String getSurname() {
+        return surname;
+    }
 }

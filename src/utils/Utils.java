@@ -32,6 +32,10 @@ public class Utils {
             System.out.print("\t Buyer: " + transaction.getCustomer().getName() + "\n" +
                     "\t VAT: " + ((Company) (transaction).getCustomer()).getVatNumber() + "\n");
         }
+        else if(transaction.getCustomer().getClass() == Person.class){
+            System.out.print("\t Buyer: " + transaction.getCustomer().getName() + " " +
+                     ((Person)transaction.getCustomer()).getSurname() + "\n");
+        }
 
         if (transaction.getCustomer().isPremium()) {
             double newPrice = transaction.getProduct().getPrice() - transaction.getProduct().getPrice() * Customer.DISCOUNT_FACTOR;
